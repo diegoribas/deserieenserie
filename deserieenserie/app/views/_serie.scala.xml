@@ -1,0 +1,7 @@
+@(serie: Serie)
+<serie id="@serie.id">
+    <nombre>@serie.nombre</nombre>
+    <descripcion>@serie.descripcion</descripcion>
+    <genero>@serie.genero</genero>
+    <valoracion>@serie.valoracion</valoracion>
+</serie>

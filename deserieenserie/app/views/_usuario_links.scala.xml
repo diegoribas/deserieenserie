@@ -1,0 +1,4 @@
+@(usuario: Usuario)
+<hypermedia>
+	<retrieve>@routes.Usuarios.getUser(usuario.id)</retrieve>
+</hypermedia>

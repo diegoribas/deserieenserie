@@ -1,0 +1,217 @@
+11-26 21:31:15 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "PLAY_EVOLUTIONS" no encontrada
+Table "PLAY_EVOLUTIONS" not found; SQL statement:
+select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-172]
+11-26 22:34:09 jdbc[11]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363)
+	at com.jolbox.bonecp.BoneCP.obtainInternalConnection(BoneCP.java:269)
+	at com.jolbox.bonecp.ConnectionHandle.<init>(ConnectionHandle.java:242)
+	at com.jolbox.bonecp.PoolWatchThread.fillConnections(PoolWatchThread.java:115)
+	at com.jolbox.bonecp.PoolWatchThread.run(PoolWatchThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 18 more
+11-26 22:34:09 jdbc[11]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363)
+	at com.jolbox.bonecp.BoneCP.obtainInternalConnection(BoneCP.java:269)
+	at com.jolbox.bonecp.ConnectionHandle.<init>(ConnectionHandle.java:242)
+	at com.jolbox.bonecp.PoolWatchThread.fillConnections(PoolWatchThread.java:115)
+	at com.jolbox.bonecp.PoolWatchThread.run(PoolWatchThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 18 more
+11-27 20:16:11 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "'4.8' (SERIE: VALORACION BIGINT)"
+Data conversion error converting "'4.8' (SERIE: VALORACION BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SERIE"("ID","NOMBRE","VALORACION")VALUES(?,?,?) -- (?1, ?2, ?3) [22018-172]
+11-27 20:16:11 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Conversión de datos fallida, convirtiendo "'4.8' (SERIE: VALORACION BIGINT)"
+Data conversion error converting "'4.8' (SERIE: VALORACION BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SERIE"("ID","NOMBRE","VALORACION")VALUES(?,?,?) -- (?1, ?2, ?3) [22018-172]
+11-27 21:15:10 jdbc[23]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:351)
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416)
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120)
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:245)
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:243)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:243)
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88)
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88)
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18)
+	at play.api.Play$.start(Play.scala:87)
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139)
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112)
+	at scala.Option.map(Option.scala:145)
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112)
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110)
+	at scala.util.Success.flatMap(Try.scala:200)
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110)
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 44 more
+11-27 21:23:03 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "USUARIO[*] SELECT * FROM SERIE_USUARIO"; se esperaba "UPDATE, {"
+Syntax error in SQL statement "USUARIO[*] SELECT * FROM SERIE_USUARIO"; expected "UPDATE, {"; SQL statement:
+USUARIO SELECT * FROM SERIE_USUARIO [42001-172]
+11-27 21:23:04 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "USUARIO[*] SELECT * FROM SERIE_USUARIO"; se esperaba "UPDATE, {"
+Syntax error in SQL statement "USUARIO[*] SELECT * FROM SERIE_USUARIO"; expected "UPDATE, {"; SQL statement:
+USUARIO SELECT * FROM SERIE_USUARIO [42001-172]
+11-29 17:09:41 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SERIE_USUARIO[*] SELECT * FROM SERIE_USUARIO"; se esperaba "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"
+Syntax error in SQL statement "SERIE_USUARIO[*] SELECT * FROM SERIE_USUARIO"; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+SERIE_USUARIO SELECT * FROM SERIE_USUARIO [42001-172]
+11-29 18:11:04 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "VALORACION_USUARIO"; se esperaba "VALUES, {"
+Syntax error in SQL statement "VALORACION_USUARIO"; expected "VALUES, {"; SQL statement:
+VALORACION_USUARIO [42001-172]
+12-01 00:26:13 jdbc[308]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+12-01 00:26:13 jdbc[308]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+12-01 00:26:13 jdbc[308]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+12-01 00:26:13 jdbc[308]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+12-01 00:45:40 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELESERIE"; se esperaba "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"
+Syntax error in SQL statement "SELESERIE"; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+SELESERIE [42001-172]

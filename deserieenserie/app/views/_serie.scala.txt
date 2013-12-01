@@ -1,0 +1,8 @@
+@(serie: Serie)
+{
+	"id":"@serie.id",
+	"nombre":"@serie.nombre",
+	"descripcion":"@serie.descripcion",
+	"valoracion":"@serie.valoracion",
+	"genero":"@serie.genero"
+}

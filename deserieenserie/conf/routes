@@ -1,0 +1,20 @@
+#Controller Usuarios
+
+GET		/usuarios					controllers.Usuarios.getUsers()
+GET		/usuario/:id				controllers.Usuarios.getUser(id: Long)
+POST	/usuario					controllers.Usuarios.addUser()
+
+POST    /usuario/:idUsuario/serie/:idSerie		controllers.Usuarios.addSerieUsuario(idUsuario: Long, idSerie: Long)
+GET 	/usuario/:idUsuario/series				controllers.Usuarios.getSeriesUsuario(idUsuario: Long)
+
+#Controller Series
+
+GET		/series						controllers.Series.getSeries()
+GET 	/serie/:id					controllers.Series.getSerie(id: Long)
+
+
+POST /usuario/:idUsuario/serie/:idSerie/valoracion	controllers.Series.addValoracionUsuario(idUsuario: Long, idSerie: Long)
+GET  /usuario/:idUsuario/serie/:idSerie/valoracion    controllers.Series.getValoracionUsuario(idUsuario: Long, idSerie: Long)
+
+GET /genero/:genero				controllers.Series.getSeriesGenero(genero: String)
+

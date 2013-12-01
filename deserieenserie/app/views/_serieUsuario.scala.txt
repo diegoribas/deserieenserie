@@ -1,0 +1,7 @@
+@(serieUsuario: SerieUsuario)
+{
+	"id":"@serieUsuario.id",
+	"fuente":"@serieUsuario.fuente",
+	"temporada":"@serieUsuario.temporada",
+	"capitulo":@serieUsuario.capitulo
+}

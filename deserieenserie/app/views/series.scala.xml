@@ -1,0 +1,7 @@
+@(series: List[Serie])
+
+<series>
+@for(s <- series) {
+	@_serie(s)
+}
+</series>

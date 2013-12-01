@@ -1,0 +1,6 @@
+@(seriesUsuario: List[SerieUsuario])
+[
+@for(su <- seriesUsuario) {
+	@_serieUsuario(su)
+}
+]

@@ -1,0 +1,1 @@
+error=No se ha podido completar la operación

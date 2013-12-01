@@ -1,0 +1,5 @@
+@(valoracionUsuario: ValoracionUsuario)
+{
+	"id":"@valoracionUsuario.id",
+	"valoracion":"@valoracionUsuario.valoracion",
+}
